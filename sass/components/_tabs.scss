@@ -1,0 +1,42 @@
+.tab {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  font-family: $font-main;
+  font-size: $font-size-large;
+  font-weight: 300;
+  color: $color-link;
+  padding: 0 15px;
+  border-radius: 3px;
+
+  &:hover {
+    cursor: pointer;
+    color: $color-hover;
+  }
+
+  span {
+    width: 16px;
+    height: 16px;
+    display: block;
+    float: left;
+    border-radius: 50%;
+    margin: calc((40px - 16px)/2) 10px 0 0;
+  }
+
+  .one {
+    background-color: $color-tab-one;
+  }
+
+  .two {
+    background-color: $color-tab-two;
+  }
+
+  .three {
+    background-color: $color-tab-three;
+  }
+}
+
+.active {
+  background: $color-five;
+  color: $color-two;
+}

@@ -1,0 +1,22 @@
+.btn {
+  display: inline-block;
+  background: $color-button;
+  height: 40px;
+  line-height: 40px;
+  font-family: $font-main;
+  font-size: $font-size-button;
+  font-weight: 300;
+  color: $bg-light;
+  padding: 0 20px;
+  border-radius: 3px;
+
+  &:before {
+    line-height: 40px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background: $color-hover;
+  }
+}
+

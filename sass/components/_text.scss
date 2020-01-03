@@ -1,0 +1,50 @@
+h1, h2, h3 {
+  font-family: $font-main;
+  font-size: $font-size-large;
+  color: $color-two;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+h2, h3 {
+  font-weight: bold;
+}
+
+h3 {
+  width: 300px;
+  padding: 0 0 5px 0;
+  border-bottom: 1px solid $color-four;
+
+  span {
+    float: right;
+    font-weight: 300;
+    color: $color-one;
+  }
+}
+
+p {
+  font-family: $font-main;
+  font-size: $font-size-medium;
+  font-weight: 300;
+  color: $color-one;
+}
+
+a, i.link {
+  font-family: $font-main;
+  font-size: $font-size-large;
+  font-weight: 300;
+  color: $color-link;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+    color: $color-hover;
+  }
+}
+
+.small {
+  font-size: $font-size-small;
+}

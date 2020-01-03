@@ -1,0 +1,57 @@
+.wrap-date, .wrap-line-headings, .wrap-charts, .wrap-tabs, .wrap-chart-image, .wrap-links {
+  padding: 40px 0;
+  width: 700px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.wrap-date, .wrap-tabs, .wrap-chart-image, .wrap-links{
+  justify-content: center;
+
+}
+
+.wrap-date {
+  .btn {
+    width: 40px;
+    padding: 0;
+    text-align: center;
+    margin: 0 0 0 10px;
+  }
+}
+
+.wrap-line-headings {
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  h3 {
+    flex: 0 45%;
+  }
+}
+
+.wrap-charts {
+  flex-wrap: wrap;
+
+  h2 {
+    flex: 0 100%;
+  }
+}
+
+.wrap-tabs {
+  .tab {
+    margin: 0 0 0 40px;
+  }
+}
+
+.wrap-links {
+  flex-wrap: wrap;
+  padding: 0;
+
+  .btn {
+    margin: 20px 0;
+  }
+
+  table {
+    width: 100%;
+  }
+}
+

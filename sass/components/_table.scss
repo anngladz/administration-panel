@@ -1,0 +1,35 @@
+table {
+  border-collapse: collapse;
+}
+
+tr {
+  border-bottom: 1px solid $color-four;
+  border-top: 1px solid $color-four;
+
+  .icons {
+    float: right;
+    padding: 0 10px;
+    opacity: 0;
+  }
+
+  &:hover{
+    background-color: $color-five;
+    cursor: pointer;
+
+    .icons {
+      opacity: 1;
+
+      &:hover {
+        color: $color-hover;
+      }
+    }
+  }
+}
+
+td {
+  font-family: $font-main;
+  font-size: $font-size-large;
+  color: $color-two;
+  font-weight: bold;
+  padding: 20px 10px;
+}

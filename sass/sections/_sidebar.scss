@@ -1,0 +1,76 @@
+.sidebar {
+  ul {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    li {
+      width: 100%;
+      padding: 10px 15px;
+      box-sizing: border-box;
+
+      &:hover {
+        cursor: pointer;
+        background: $color-one;
+        box-shadow: inset 4px 0px 0px 0px $color-button;
+
+        a, i {
+          color: $bg-light;
+        }
+      }
+
+      a, i {
+        font-size: $font-size-medium;
+        color: $color-two;
+        vertical-align: middle;
+      }
+
+      i {
+        padding: 0 10px 0 0;
+      }
+    }
+  }
+}
+
+.manager {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 20px 0 0 0;
+  padding: 10px;
+  border-top: 1px solid $color-one;
+  position: relative;
+
+
+  h1, a {
+    font-size: $font-size-medium;
+  }
+
+  .wrap-manager {
+    position: relative;
+    margin: 20px 0 0 0;
+
+    img {
+      float: left;
+    }
+
+    span {
+      position: absolute;
+      top: 0px;
+      left: 32px;
+      width: 10px;
+      height: 10px;
+      background: $color-online;
+      border-radius: 50%;
+    }
+
+    a {
+      margin: 0 0 0 10px;
+      line-height: 43px;
+    }
+  }
+}
+
+.unactive {
+  display: none;
+}

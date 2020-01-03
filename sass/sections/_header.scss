@@ -1,0 +1,28 @@
+.logo-wrapper {
+  width: 80%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  .hamburger {
+    float: right;
+  }
+
+  i {
+    color: $color-two;
+    line-height: 23px;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+
+    &:hover {
+      color: $bg-light;
+    }
+  }
+
+  .i-active {
+    display: inline-block;
+  }
+}

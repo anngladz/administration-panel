@@ -1,0 +1,47 @@
+.date {
+  display: inline-block;
+  height: 40px;
+  box-sizing: border-box;
+  border: 1px solid $color-four;
+  border-radius: 3px;
+  font-family: $font-main;
+
+  &:hover {
+    cursor: pointer;
+    border: 1px solid $color-two;
+
+    .calendar {
+      color: $color-one;
+    }
+  }
+
+  input {
+    border: none;
+    height: 20px;
+    padding: 0 0 0 20px;
+    margin: 10px 0 0 0;
+    font-weight: 300;
+    color: $color-one;
+
+    &:nth-of-type(2){
+      border-left: 1px solid $color-four;
+    }
+
+    &:focus {
+      outline-width: 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .calendar {
+    float: right;
+    font-size: 13px;
+    line-height: 40px;
+    margin-top: 2px;
+    color: $color-three;
+    padding: 0 20px 0 0;
+  }
+}

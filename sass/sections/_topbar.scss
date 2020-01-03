@@ -1,0 +1,56 @@
+.topbar {
+  ul {
+    height: 100%;
+    margin: 0;
+    float: right;
+    font-size: 0;
+
+    li {
+      display: inline-block;
+      height: 100%;
+      font-family: $font-main;
+      color: $color-two;
+      line-height: 6vh;
+      font-size: 22px;
+      border-left: 1px solid $color-four;
+      margin: 0;
+
+      &:hover {
+        cursor: pointer;
+        background: $color-five;
+      }
+    }
+
+    i {
+      padding: 0 15px;
+      vertical-align: middle;
+      font-size: 17px;
+      position: relative;
+
+      &:nth-of-type(2){
+        font-size: 12px;
+      }
+
+      &:hover {
+        cursor: pointer;
+        color: $color-hover;
+      }
+
+      span {
+        position: absolute;
+        top: -3px;
+        left: 25px;
+        width: 8px;
+        height: 8px;
+        background: $color-button;
+        border-radius: 50%;
+      }
+    }
+
+    a {
+      vertical-align: middle;
+      font-size: 13px;
+      padding: 0 15px 0 0;
+    }
+  }
+}
