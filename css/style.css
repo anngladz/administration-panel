@@ -343,10 +343,10 @@ template {
 .grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 10vw auto;
-      grid-template-columns: 10vw auto;
-  -ms-grid-rows: 6vh auto;
-      grid-template-rows: 6vh auto;
+  -ms-grid-columns: 190px auto;
+      grid-template-columns: 190px auto;
+  -ms-grid-rows: 60px auto;
+      grid-template-rows: 60px auto;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
@@ -361,6 +361,9 @@ template {
   grid-area: 1 / 2 / 2 / 3;
   background: #fff;
   border: 1px solid #e3e3e3;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 .sidebar {
@@ -504,6 +507,10 @@ td {
   padding: 20px 10px;
 }
 
+td:nth-of-type(1) {
+  width: 40%;
+}
+
 .btn {
   display: inline-block;
   background: #f58220;
@@ -524,6 +531,11 @@ td {
 .btn:hover {
   cursor: pointer;
   background: #ffa200;
+}
+
+.btn i {
+  display: block;
+  margin-top: 3px;
 }
 
 .date {
@@ -604,6 +616,12 @@ td {
   display: inline-block;
 }
 
+.fixed-header {
+  width: 190px;
+  height: 60px;
+  position: fixed;
+}
+
 .topbar ul {
   height: 100%;
   margin: 0;
@@ -616,7 +634,7 @@ td {
   height: 100%;
   font-family: "Roboto", sans-serif;
   color: #979797;
-  line-height: 6vh;
+  line-height: 60px;
   font-size: 22px;
   border-left: 1px solid #e3e3e3;
   margin: 0;
@@ -654,9 +672,20 @@ td {
 }
 
 .topbar ul a {
-  vertical-align: middle;
   font-size: 13px;
   padding: 0 15px 0 0;
+}
+
+.link-wrap {
+  float: right;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.fixed-topbar {
+  width: calc(100% - 190px);
+  height: 60px;
+  position: fixed;
 }
 
 .sidebar ul {
@@ -731,6 +760,12 @@ td {
 
 .unactive {
   display: none;
+}
+
+.fixed-sidebar {
+  width: 190px;
+  height: calc(100% - 60px);
+  position: fixed;
 }
 
 .wrapper {

@@ -10,7 +10,7 @@
       height: 100%;
       font-family: $font-main;
       color: $color-two;
-      line-height: 6vh;
+      line-height: 60px;
       font-size: 22px;
       border-left: 1px solid $color-four;
       margin: 0;
@@ -48,9 +48,20 @@
     }
 
     a {
-      vertical-align: middle;
       font-size: 13px;
       padding: 0 15px 0 0;
     }
   }
 }
+
+.link-wrap {
+  float: right;
+  display: flex;
+}
+
+.fixed-topbar {
+  width: calc(100% - 190px);
+  height: 60px;
+  position: fixed;
+}
+

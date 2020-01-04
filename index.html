@@ -16,39 +16,47 @@
 <body>
   <div class="grid">
     <header class="header">
-      <div class="logo-wrapper">
-        <img src="images/logo.png">
-        <div class="hamburger">
-          <i class="fas fa-bars i-active"></i>
-          <i class="fas fa-times"></i>
+      <div class="fixed-header">
+        <div class="logo-wrapper">
+          <img src="images/logo.png">
+          <div class="hamburger">
+            <i class="fas fa-bars i-active"></i>
+            <i class="fas fa-times"></i>
+          </div>
         </div>
       </div>
     </header>
 
     <nav class="topbar">
-      <ul>
-        <li><i class="icon-wallet"></i>$ 1,500.00<i class="icon-arrow-down"></i></li>
-        <li><i class="icon-notification"><span></span></i></li>
-        <li><i class="icon-profile"></i><a href="#">Leonardo Dicaprio</a></li>
-        <li><i class="icon-quit"></i></li>
-      </ul>
+      <div class="fixed-topbar">
+        <ul>
+          <li><i class="icon-wallet"></i>$ 1,500.00<i class="icon-arrow-down"></i></li>
+          <li><i class="icon-notification"><span></span></i></li>
+          <li><i class="icon-profile"></i>
+            <div class="link-wrap"><a href="#">Leonardo Dicaprio</a></div>
+          </li>
+          <li><i class="icon-quit"></i></li>
+        </ul>
+      </div>
     </nav>
 
     <sidebar class="sidebar">
-      <ul>
-        <li><i class="icon-general"></i><a href="#">General</a></li>
-        <li><i class="icon-details"></i><a href="#">Details</a></li>
-        <li><i class="icon-links"></i><a href="#">Links</a></li>
-        <li><i class="icon-banners"></i><a href="#">Banners</a></li>
-        <li><i class="icon-personaldata"></i><a href="#">Personal data</a></li>
-        <li><i class="icon-payout"></i><a href="#">Payout</a></li>
-        <li><i class="icon-postback"></i><a href="#">Postback</a></li>
-      </ul>
-      <div class="manager">
-        <h1>Your manager</h1>
-        <div class="wrap-manager">
-          <img src="images/manager.png" alt="manager"><span></span>
-          <a href="#">Mikhael E.</a>
+      <div class="fixed-sidebar">
+        <ul>
+          <li><i class="icon-general"></i><a href="#">General</a></li>
+          <li><i class="icon-details"></i><a href="#">Details</a></li>
+          <li><i class="icon-links"></i><a href="#">Links</a></li>
+          <li><i class="icon-banners"></i><a href="#">Banners</a></li>
+          <li><i class="icon-personaldata"></i><a href="#">Personal data</a></li>
+          <li><i class="icon-payout"></i><a href="#">Payout</a></li>
+          <li><i class="icon-postback"></i><a href="#">Postback</a></li>
+        </ul>
+        <div class="manager">
+          <h1>Your manager</h1>
+          <div class="wrap-manager">
+            <img src="images/manager.png" alt="manager"><span></span>
+            <a href="#">Mikhael E.</a>
+          </div>
         </div>
       </div>
     </sidebar>

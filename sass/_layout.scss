@@ -1,9 +1,10 @@
 .grid {
   display: grid;
-  grid-template-columns: 10vw auto;
-  grid-template-rows: 6vh auto;
+  grid-template-columns: 190px auto;
+  grid-template-rows: 60px auto;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+
 }
 
 .header {
@@ -16,6 +17,8 @@
   grid-area: 1 / 2 / 2 / 3;
   background: $bg-light;
   border: 1px solid $color-four;
+  position: sticky;
+  top: 0;
 }
 
 .sidebar {
