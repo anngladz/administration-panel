@@ -771,11 +771,11 @@ table tr:hover .icons:hover {
   transform: translate(-50%, -50%);
 }
 
-.hamburger {
+.logo-wrapper .hamburger {
   float: right;
 }
 
-.hamburger i {
+.logo-wrapper i {
   color: #979797;
   line-height: 23px;
   font-size: 22px;
@@ -783,11 +783,11 @@ table tr:hover .icons:hover {
   display: none;
 }
 
-.hamburger i:hover {
+.logo-wrapper i:hover {
   color: #fff;
 }
 
-.i-active {
+.logo-wrapper .i-active {
   display: inline-block;
 }
 
