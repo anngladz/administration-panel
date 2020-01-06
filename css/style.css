@@ -563,7 +563,7 @@ a:hover, i.link:hover {
   background-color: #59b66d;
 }
 
-.active {
+.tab-active {
   background: #f5f5f2;
   color: #979797;
 }
@@ -619,6 +619,7 @@ td:nth-of-type(1) {
   color: #fff;
   padding: 0 20px;
   border-radius: 3px;
+  border: none;
 }
 
 .btn:before {
@@ -726,12 +727,6 @@ td:nth-of-type(1) {
   .hamburger-large {
     display: none;
   }
-  .fa-bars {
-    display: inline-block;
-  }
-  .fa-times {
-    display: none;
-  }
 }
 
 @media (min-width: 992px) {
@@ -739,12 +734,6 @@ td:nth-of-type(1) {
     display: none;
   }
   .hamburger-large {
-    display: inline-block;
-  }
-  .fa-bars {
-    display: none;
-  }
-  .fa-times {
     display: inline-block;
   }
 }
@@ -1021,7 +1010,7 @@ td:nth-of-type(1) {
 }
 
 .wrap-tabs .tab {
-  margin: 0 0 0 40px;
+  margin: 0 20px 0 20px;
 }
 
 .wrap-links {
@@ -1036,5 +1025,11 @@ td:nth-of-type(1) {
 
 .wrap-links table {
   width: 100%;
+}
+
+@media (max-width: 992px) {
+  .wrap-date, .wrap-line-headings, .wrap-charts, .wrap-tabs, .wrap-chart-image, .wrap-links {
+    width: 80%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

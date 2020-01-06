@@ -4,7 +4,7 @@ const tabs = document.querySelectorAll('.tab');
 
 for (let tab of tabs) {
   tab.addEventListener('click', function () {
-    tab.classList.toggle('active');
+    tab.classList.toggle('tab-active');
   });
 }
 

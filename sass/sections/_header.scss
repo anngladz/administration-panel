@@ -41,14 +41,6 @@
   .hamburger-large {
     display: none;
   }
-
-  .fa-bars {
-    display: inline-block;
-  }
-
-  .fa-times {
-    display: none;
-  }
 }
 
 @media(min-width: 992px) {
@@ -57,14 +49,6 @@
   }
 
   .hamburger-large {
-    display: inline-block;
-  }
-
-  .fa-bars {
-    display: none;
-  }
-
-  .fa-times {
     display: inline-block;
   }
 }
