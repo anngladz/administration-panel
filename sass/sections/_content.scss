@@ -1,7 +1,15 @@
+.content {
+  background: $color-five;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: calc(100vh - 60px);
+}
+
 .wrapper {
   margin: 20px;
   background: $bg-light;
   box-shadow: 0px 0px 10px 0px $color-four;
+  overflow: hidden;
 
   h1 {
     padding: 20px;

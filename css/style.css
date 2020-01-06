@@ -340,40 +340,137 @@ template {
   display: none;
 }
 
-.grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 190px auto;
-      grid-template-columns: 190px auto;
-  -ms-grid-rows: 60px auto;
-      grid-template-rows: 60px auto;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+* {
+  box-sizing: border-box;
 }
 
-.header {
-  grid-area: 1 / 1 / 2 / 2;
-  background: #191919;
-  position: relative;
+.container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
 }
 
-.topbar {
-  grid-area: 1 / 2 / 2 / 3;
-  background: #fff;
-  border: 1px solid #e3e3e3;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-}
-
-.sidebar {
-  grid-area: 2 / 1 / 3 / 2;
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   background: #191919;
 }
 
-.content {
-  grid-area: 2 / 2 / 3 / 3;
-  background: #f5f5f2;
+@media (max-width: 992px) {
+  .col-sm-1 {
+    -ms-flex: 0 0 8.33333%;
+        flex: 0 0 8.33333%;
+    max-width: 8.33333%;
+  }
+  .col-sm-2 {
+    -ms-flex: 0 0 16.66667%;
+        flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+  }
+  .col-sm-3 {
+    -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .col-sm-4 {
+    -ms-flex: 0 0 33.33333%;
+        flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+  .col-sm-5 {
+    -ms-flex: 0 0 41.66667%;
+        flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+  }
+  .col-sm-6 {
+    -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .col-sm-7 {
+    -ms-flex: 0 0 58.33333%;
+        flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+  }
+  .col-sm-8 {
+    -ms-flex: 0 0 66.66667%;
+        flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+  }
+  .col-sm-9 {
+    -ms-flex: 0 0 75%;
+        flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .col-sm-10 {
+    -ms-flex: 0 0 83.33333%;
+        flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+  }
+  .col-sm-11 {
+    -ms-flex: 0 0 91.66667%;
+        flex: 0 0 91.66667%;
+    max-width: 91.66667%;
+  }
+  .col-sm-12 {
+    -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-lg-1 {
+    -ms-flex: 0 0 190px;
+        flex: 0 0 190px;
+    max-width: 190px;
+  }
+  .col-lg-2 {
+    -ms-flex: 1;
+        flex: 1;
+  }
+  .col-lg-3 {
+    -ms-flex: 1;
+        flex: 1;
+  }
+  .col-lg-4 {
+    -ms-flex: 1;
+        flex: 1;
+  }
+  .col-lg-5 {
+    -ms-flex: 1;
+        flex: 1;
+  }
+  .col-lg-6 {
+    -ms-flex: 1;
+        flex: 1;
+  }
+  .col-lg-7 {
+    -ms-flex: 1;
+        flex: 1;
+  }
+  .col-lg-8 {
+    -ms-flex: 1;
+        flex: 1;
+  }
+  .col-lg-9 {
+    -ms-flex: 1;
+        flex: 1;
+  }
+  .col-lg-10 {
+    -ms-flex: 1;
+        flex: 1;
+  }
+  .col-lg-11 {
+    -ms-flex: 1;
+        flex: 1;
+  }
+  .col-lg-12 {
+    -ms-flex: 1;
+        flex: 1;
+  }
 }
 
 /* Components */
@@ -587,6 +684,12 @@ td:nth-of-type(1) {
 }
 
 /* Sections */
+.header {
+  background: #191919;
+  position: relative;
+  height: 60px;
+}
+
 .logo-wrapper {
   width: 80%;
   margin: 0;
@@ -616,10 +719,40 @@ td:nth-of-type(1) {
   display: inline-block;
 }
 
-.fixed-header {
-  width: 190px;
+@media (max-width: 992px) {
+  .hamburger-small {
+    display: inline-block;
+  }
+  .hamburger-large {
+    display: none;
+  }
+  .fa-bars {
+    display: inline-block;
+  }
+  .fa-times {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .hamburger-small {
+    display: none;
+  }
+  .hamburger-large {
+    display: inline-block;
+  }
+  .fa-bars {
+    display: none;
+  }
+  .fa-times {
+    display: inline-block;
+  }
+}
+
+.topbar {
+  background: #fff;
+  border: 1px solid #e3e3e3;
   height: 60px;
-  position: fixed;
 }
 
 .topbar ul {
@@ -682,10 +815,20 @@ td:nth-of-type(1) {
   display: flex;
 }
 
-.fixed-topbar {
-  width: calc(100% - 190px);
-  height: 60px;
-  position: fixed;
+@media (max-width: 992px) {
+  .topbar {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .topbar {
+    display: block;
+  }
+}
+
+.sidebar {
+  background: #191919;
 }
 
 .sidebar ul {
@@ -721,7 +864,7 @@ td:nth-of-type(1) {
   padding: 0 10px 0 0;
 }
 
-.manager {
+.sidebar .manager {
   box-sizing: border-box;
   width: 100%;
   margin: 20px 0 0 0;
@@ -730,20 +873,20 @@ td:nth-of-type(1) {
   position: relative;
 }
 
-.manager h1, .manager a {
+.sidebar .manager h1, .sidebar .manager a {
   font-size: 14px;
 }
 
-.manager .wrap-manager {
+.sidebar .manager .wrap-manager {
   position: relative;
   margin: 20px 0 0 0;
 }
 
-.manager .wrap-manager img {
+.sidebar .manager .wrap-manager img {
   float: left;
 }
 
-.manager .wrap-manager span {
+.sidebar .manager .wrap-manager span {
   position: absolute;
   top: 0px;
   left: 32px;
@@ -753,25 +896,73 @@ td:nth-of-type(1) {
   border-radius: 50%;
 }
 
-.manager .wrap-manager a {
+.sidebar .manager .wrap-manager a {
   margin: 0 0 0 10px;
   line-height: 43px;
 }
 
-.unactive {
-  display: none;
+.sidebar .sidebar-topbar {
+  margin: 20px 0;
+  border-top: 1px solid #333;
 }
 
-.fixed-sidebar {
-  width: 190px;
-  height: calc(100% - 60px);
-  position: fixed;
+.sidebar .sidebar-topbar .sidebar-topbar-list {
+  margin: 20px 0 0 0;
+  color: #979797;
+  font-family: "Roboto", sans-serif;
+}
+
+.sidebar .sidebar-topbar .sidebar-topbar-list i:nth-of-type(2) {
+  margin: 0 0 0 10px;
+  font-size: 10px;
+}
+
+@media (max-width: 992px) {
+  .sidebar {
+    height: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    transition: 1s all;
+  }
+  .sidebar-wrapper {
+    width: 85vw;
+    margin: 0 auto;
+  }
+  .active {
+    height: calc(100vh - 60px);
+  }
+  .sidebar-topbar {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+  .sidebar {
+    display: block;
+    height: calc(100vh - 60px);
+    transition: 1s all;
+    overflow: hidden;
+  }
+  .unactive {
+    height: 0;
+  }
+  .sidebar-topbar {
+    display: none;
+  }
+}
+
+.content {
+  background: #f5f5f2;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: calc(100vh - 60px);
 }
 
 .wrapper {
   margin: 20px;
   background: #fff;
   box-shadow: 0px 0px 10px 0px #e3e3e3;
+  overflow: hidden;
 }
 
 .wrapper h1 {

@@ -1,4 +1,6 @@
 .sidebar {
+  background: $bg-dark;
+
   ul {
     list-style: none;
     width: 100%;
@@ -31,52 +33,99 @@
       }
     }
   }
-}
 
-.manager {
-  box-sizing: border-box;
-  width: 100%;
-  margin: 20px 0 0 0;
-  padding: 10px;
-  border-top: 1px solid $color-one;
-  position: relative;
-
-
-  h1, a {
-    font-size: $font-size-medium;
-  }
-
-  .wrap-manager {
-    position: relative;
+  .manager {
+    box-sizing: border-box;
+    width: 100%;
     margin: 20px 0 0 0;
+    padding: 10px;
+    border-top: 1px solid $color-one;
+    position: relative;
 
-    img {
-      float: left;
+
+    h1, a {
+      font-size: $font-size-medium;
     }
 
-    span {
-      position: absolute;
-      top: 0px;
-      left: 32px;
-      width: 10px;
-      height: 10px;
-      background: $color-online;
-      border-radius: 50%;
-    }
+    .wrap-manager {
+      position: relative;
+      margin: 20px 0 0 0;
 
-    a {
-      margin: 0 0 0 10px;
-      line-height: 43px;
+      img {
+        float: left;
+      }
+
+      span {
+        position: absolute;
+        top: 0px;
+        left: 32px;
+        width: 10px;
+        height: 10px;
+        background: $color-online;
+        border-radius: 50%;
+      }
+
+      a {
+        margin: 0 0 0 10px;
+        line-height: 43px;
+      }
+    }
+  }
+
+  .sidebar-topbar {
+    margin: 20px 0;
+    border-top: 1px solid $color-one;
+
+    .sidebar-topbar-list {
+      margin: 20px 0 0 0;
+      color: $color-two;
+      font-family: $font-main;
+
+      i {
+        &:nth-of-type(2){
+          margin: 0 0 0 10px;
+          font-size: 10px;
+        }
+      }
     }
   }
 }
 
-.unactive {
-  display: none;
+@media(max-width: 992px) {
+  .sidebar {
+    height: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    transition: 1s all;
+  }
+
+  .sidebar-wrapper {
+    width: 85vw;
+    margin: 0 auto;
+  }
+
+  .active {
+    height: calc(100vh - 60px);
+  }
+
+  .sidebar-topbar {
+    display: block;
+  }
 }
 
-.fixed-sidebar {
-  width: 190px;
-  height: calc(100% - 60px);
-  position: fixed;
+@media(min-width: 992px) {
+  .sidebar {
+    display: block;
+    height: calc(100vh - 60px);
+    transition: 1s all;
+    overflow: hidden;
+  }
+
+  .unactive {
+    height: 0;
+  }
+
+  .sidebar-topbar {
+    display: none;
+  }
 }

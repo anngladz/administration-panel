@@ -1,3 +1,9 @@
+.header {
+  background: $bg-dark;
+  position: relative;
+  height: 60px;
+}
+
 .logo-wrapper {
   width: 80%;
   margin: 0;
@@ -27,8 +33,38 @@
   }
 }
 
-.fixed-header {
-  width: 190px;
-  height: 60px;
-  position: fixed;
+@media(max-width: 992px) {
+  .hamburger-small {
+    display: inline-block;
+  }
+
+  .hamburger-large {
+    display: none;
+  }
+
+  .fa-bars {
+    display: inline-block;
+  }
+
+  .fa-times {
+    display: none;
+  }
+}
+
+@media(min-width: 992px) {
+  .hamburger-small {
+    display: none;
+  }
+
+  .hamburger-large {
+    display: inline-block;
+  }
+
+  .fa-bars {
+    display: none;
+  }
+
+  .fa-times {
+    display: inline-block;
+  }
 }

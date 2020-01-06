@@ -14,21 +14,24 @@
 </head>
 
 <body>
-  <div class="grid">
-    <header class="header">
-      <div class="fixed-header">
+  <div class="container">
+    <div class="row">
+
+      <header class="header col-sm-12 col-lg-1">
         <div class="logo-wrapper">
           <img src="images/logo.png">
-          <div class="hamburger">
+          <div class="hamburger hamburger-small">
             <i class="fas fa-bars i-active"></i>
             <i class="fas fa-times"></i>
           </div>
+          <div class="hamburger hamburger-large">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-times i-active"></i>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
 
-    <nav class="topbar">
-      <div class="fixed-topbar">
+      <nav class="topbar col-sm-12 col-lg-11">
         <ul>
           <li><i class="icon-wallet"></i>$ 1,500.00<i class="icon-arrow-down"></i></li>
           <li><i class="icon-notification"><span></span></i></li>
@@ -37,152 +40,168 @@
           </li>
           <li><i class="icon-quit"></i></li>
         </ul>
-      </div>
-    </nav>
+      </nav>
 
-    <sidebar class="sidebar">
-      <div class="fixed-sidebar">
-        <ul>
-          <li><i class="icon-general"></i><a href="#">General</a></li>
-          <li><i class="icon-details"></i><a href="#">Details</a></li>
-          <li><i class="icon-links"></i><a href="#">Links</a></li>
-          <li><i class="icon-banners"></i><a href="#">Banners</a></li>
-          <li><i class="icon-personaldata"></i><a href="#">Personal data</a></li>
-          <li><i class="icon-payout"></i><a href="#">Payout</a></li>
-          <li><i class="icon-postback"></i><a href="#">Postback</a></li>
-        </ul>
-        <div class="manager">
-          <h1>Your manager</h1>
-          <div class="wrap-manager">
-            <img src="images/manager.png" alt="manager"><span></span>
-            <a href="#">Mikhael E.</a>
-          </div>
-        </div>
-      </div>
-    </sidebar>
+    </div>
 
-    <section class="content">
-      <div class="wrapper">
-        <h1>General statistic</h1>
-        <hr>
-        <div class="wrap-date">
-          <div class="date">
-            <input type="date"><input type="date">
-            <i class="icon-calendar calendar"></i>
+    <div class="row">
+
+      <sidebar class="sidebar col-sm-12 col-lg-1">
+        <div class="sidebar-wrapper">
+          <ul>
+            <li><i class="icon-general"></i><a href="#">General</a></li>
+            <li><i class="icon-details"></i><a href="#">Details</a></li>
+            <li><i class="icon-links"></i><a href="#">Links</a></li>
+            <li><i class="icon-banners"></i><a href="#">Banners</a></li>
+            <li><i class="icon-personaldata"></i><a href="#">Personal data</a></li>
+            <li><i class="icon-payout"></i><a href="#">Payout</a></li>
+            <li><i class="icon-postback"></i><a href="#">Postback</a></li>
+          </ul>
+          <div class="manager">
+            <h1>Your manager</h1>
+            <div class="wrap-manager">
+              <img src="images/manager.png" alt="manager"><span></span>
+              <a href="#">Mikhael E.</a>
+            </div>
           </div>
-          <div class="btn"><i class="icon-refresh button"></i></div>
-        </div>
-        <hr>
-        <div class="wrap-line-headings">
-          <h3>Visit Signups<span>124</span></h3>
-          <h3>Net deposit<span>564</span></h3>
-          <h3>FTD<span>445</span></h3>
-          <h3>Turn over<span>432</span></h3>
-        </div>
-        <div class="wrap-charts">
-          <h2>Earnings charts</h2>
-          <div class="wrap-tabs">
-            <div class="tab"><span class="one"></span>Signups</div>
-            <div class="tab"><span class="two"></span>FTD</div>
-            <div class="tab"><span class="three"></span>Earned</div>
-          </div>
-          <div class="wrap-chart-image">
-            <img src="images/chart.png" alt="chart">
+          <div class="sidebar-topbar">
+            <ul class="sidebar-topbar-list">
+              <li><i class="icon-wallet"></i>$ 1,500.00<i class="icon-arrow-down"></i></li>
+              <li><i class="icon-notification"><span></span></i><a href="#">Notification</a></li>
+              <li><i class="icon-profile"></i><a href="#">Leonardo Dicaprio</a>
+              </li>
+              <li><i class="icon-quit"></i><a href="#">Logout</a></li>
+            </ul>
           </div>
         </div>
-      </div>
-      <div class="wrapper">
-        <h1>Links</h1>
-        <hr>
-        <div class="wrap-links">
-          <div class="btn">+ add new</div>
-          <table>
-            <tr>
-              <td>Home page</td>
-              <td><a href="#">http://www.homepage.com</a></td>
-              <td>
-                <div class="icons icon-trash"></div>
-                <div class="icons icon-links"></div>
-              </td>
-            </tr>
-            <tr>
-              <td>Currently offer</td>
-              <td><a href="#">http://www.currently.com</a></td>
-              <td>
-                <div class="icons icon-trash"></div>
-                <div class="icons icon-links"></div>
-              </td>
-            </tr>
-            <tr>
-              <td>Blurpix</td>
-              <td><a href="#">http://www.blurpix.com</a></td>
-              <td>
-                <div class="icons icon-trash"></div>
-                <div class="icons icon-links"></div>
-              </td>
-            </tr>
-            <tr>
-              <td>Your Site</td>
-              <td><a href="#">http://www.yoursite.com</a></td>
-              <td>
-                <div class="icons icon-trash"></div>
-                <div class="icons icon-links"></div>
-              </td>
-            </tr>
-            <tr>
-              <td>Google</td>
-              <td><a href="#">http://www.google.com</a></td>
-              <td>
-                <div class="icons icon-trash"></div>
-                <div class="icons icon-links"></div>
-              </td>
-            </tr>
-            <tr>
-              <td>Facebook</td>
-              <td><a href="#">http://www.facebook.com</a></td>
-              <td>
-                <div class="icons icon-trash"></div>
-                <div class="icons icon-links"></div>
-              </td>
-            </tr>
-            <tr>
-              <td>Dashboard</td>
-              <td><a href="#">http://www.dashboard.com</a></td>
-              <td>
-                <div class="icons icon-trash"></div>
-                <div class="icons icon-links"></div>
-              </td>
-            </tr>
-            <tr>
-              <td>Blurax</td>
-              <td><a href="#">http://www.blurax.com</a></td>
-              <td>
-                <div class="icons icon-trash"></div>
-                <div class="icons icon-links"></div>
-              </td>
-            </tr>
-            <tr>
-              <td>Piece of Wine</td>
-              <td><a href="#">http://www.pieceofwine.com</a></td>
-              <td>
-                <div class="icons icon-trash"></div>
-                <div class="icons icon-links"></div>
-              </td>
-            </tr>
-            <tr>
-              <td>Twitter</td>
-              <td><a href="#">http://www.twitter.com</a></td>
-              <td>
-                <div class="icons icon-trash"></div>
-                <div class="icons icon-links"></div>
-              </td>
-            </tr>
-          </table>
-          <div class="btn">+ add new</div>
+      </sidebar>
+
+      <section class="content col-sm-12 col-lg-11">
+        <div class="wrapper">
+          <h1>General statistic</h1>
+          <hr>
+          <div class="wrap-date">
+            <div class="date">
+              <input type="date"><input type="date">
+              <i class="icon-calendar calendar"></i>
+            </div>
+            <div class="btn"><i class="icon-refresh button"></i></div>
+          </div>
+          <hr>
+          <div class="wrap-line-headings">
+            <h3>Visit Signups<span>124</span></h3>
+            <h3>Net deposit<span>564</span></h3>
+            <h3>FTD<span>445</span></h3>
+            <h3>Turn over<span>432</span></h3>
+          </div>
+          <div class="wrap-charts">
+            <h2>Earnings charts</h2>
+            <div class="wrap-tabs">
+              <div class="tab"><span class="one"></span>Signups</div>
+              <div class="tab"><span class="two"></span>FTD</div>
+              <div class="tab"><span class="three"></span>Earned</div>
+            </div>
+            <div class="wrap-chart-image">
+              <img src="images/chart.png" alt="chart">
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
-    <script src="js/script.js"></script>
+        <div class="wrapper">
+          <h1>Links</h1>
+          <hr>
+          <div class="wrap-links">
+            <div class="btn">+ add new</div>
+            <table>
+              <tr>
+                <td>Home page</td>
+                <td><a href="#">http://www.homepage.com</a></td>
+                <td>
+                  <div class="icons icon-trash"></div>
+                  <div class="icons icon-links"></div>
+                </td>
+              </tr>
+              <tr>
+                <td>Currently offer</td>
+                <td><a href="#">http://www.currently.com</a></td>
+                <td>
+                  <div class="icons icon-trash"></div>
+                  <div class="icons icon-links"></div>
+                </td>
+              </tr>
+              <tr>
+                <td>Blurpix</td>
+                <td><a href="#">http://www.blurpix.com</a></td>
+                <td>
+                  <div class="icons icon-trash"></div>
+                  <div class="icons icon-links"></div>
+                </td>
+              </tr>
+              <tr>
+                <td>Your Site</td>
+                <td><a href="#">http://www.yoursite.com</a></td>
+                <td>
+                  <div class="icons icon-trash"></div>
+                  <div class="icons icon-links"></div>
+                </td>
+              </tr>
+              <tr>
+                <td>Google</td>
+                <td><a href="#">http://www.google.com</a></td>
+                <td>
+                  <div class="icons icon-trash"></div>
+                  <div class="icons icon-links"></div>
+                </td>
+              </tr>
+              <tr>
+                <td>Facebook</td>
+                <td><a href="#">http://www.facebook.com</a></td>
+                <td>
+                  <div class="icons icon-trash"></div>
+                  <div class="icons icon-links"></div>
+                </td>
+              </tr>
+              <tr>
+                <td>Dashboard</td>
+                <td><a href="#">http://www.dashboard.com</a></td>
+                <td>
+                  <div class="icons icon-trash"></div>
+                  <div class="icons icon-links"></div>
+                </td>
+              </tr>
+              <tr>
+                <td>Blurax</td>
+                <td><a href="#">http://www.blurax.com</a></td>
+                <td>
+                  <div class="icons icon-trash"></div>
+                  <div class="icons icon-links"></div>
+                </td>
+              </tr>
+              <tr>
+                <td>Piece of Wine</td>
+                <td><a href="#">http://www.pieceofwine.com</a></td>
+                <td>
+                  <div class="icons icon-trash"></div>
+                  <div class="icons icon-links"></div>
+                </td>
+              </tr>
+              <tr>
+                <td>Twitter</td>
+                <td><a href="#">http://www.twitter.com</a></td>
+                <td>
+                  <div class="icons icon-trash"></div>
+                  <div class="icons icon-links"></div>
+                </td>
+              </tr>
+            </table>
+            <div class="btn">+ add new</div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
 </body>
 
 </html>

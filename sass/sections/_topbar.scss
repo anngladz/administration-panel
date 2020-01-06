@@ -1,4 +1,8 @@
 .topbar {
+  background: $bg-light;
+  border: 1px solid $color-four;
+  height: 60px;
+
   ul {
     height: 100%;
     margin: 0;
@@ -59,9 +63,14 @@
   display: flex;
 }
 
-.fixed-topbar {
-  width: calc(100% - 190px);
-  height: 60px;
-  position: fixed;
+@media(max-width: 992px) {
+  .topbar {
+    display: none;
+  }
 }
 
+@media(min-width: 992px) {
+  .topbar {
+    display: block;
+  }
+}

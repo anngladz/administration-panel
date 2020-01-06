@@ -1,32 +1,32 @@
-.grid {
-  display: grid;
-  grid-template-columns: 190px auto;
-  grid-template-rows: 60px auto;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-
+* {
+  box-sizing: border-box;
 }
 
-.header {
-  grid-area: 1 / 1 / 2 / 2;
-  background: $bg-dark;
-  position: relative;
+.container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
 }
 
-.topbar {
-  grid-area: 1 / 2 / 2 / 3;
-  background: $bg-light;
-  border: 1px solid $color-four;
-  position: sticky;
-  top: 0;
-}
-
-.sidebar {
-  grid-area: 2 / 1 / 3 / 2;
+.row {
+  display: flex;
+  flex-wrap: wrap;
   background: $bg-dark;
 }
 
-.content {
-  grid-area: 2 / 2 / 3 / 3;
-  background: $color-five;
+@media(max-width: 992px) {
+  @include grid('sm');
+}
+
+@media(min-width: 992px) {
+  .col-lg-1 {
+    flex: 0 0 190px;
+    max-width: 190px;
+  }
+
+  @for $i from 2 through 12 {
+    .col-lg-#{$i} {
+      flex: 1;
+    }
+  }
 }
