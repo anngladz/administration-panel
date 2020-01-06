@@ -5,14 +5,17 @@
   display: flex;
 }
 
+.wrap-charts, .wrap-tabs, .wrap-chart-image {
+  padding: 20px 0;
+}
+
 .wrap-date, .wrap-tabs, .wrap-chart-image, .wrap-links{
   justify-content: center;
-
 }
 
 .wrap-date {
   .btn {
-    width: 40px;
+    flex: 0 0 40px;
     padding: 0;
     text-align: center;
     margin: 0 0 0 10px;
@@ -38,7 +41,7 @@
 
 .wrap-tabs {
   .tab {
-    margin: 0 20px 0 20px;
+    margin: 0 15px;
   }
 }
 
@@ -57,13 +60,41 @@
 
 @media(max-width: 992px) {
   .wrap-date, .wrap-line-headings, .wrap-charts, .wrap-tabs, .wrap-chart-image, .wrap-links {
+    width: 70vw;
+  }
 
-    width: 80%;
+  .wrap-date {
+    .btn {
+      align-self: center;
+    }
+  }
 
-
+  .wrap-line-headings {
+    h3 {
+      flex: 0 95%;
+    }
   }
 }
 
-// @media(min-width: 992px) {
+@media(max-width: 700px) {
+  .wrap-chart-image {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
 
-// }
+    img {
+      width: auto;
+    }
+  }
+}
+
+@media(max-width: 560px) {
+  .wrap-tabs {
+    flex-wrap: wrap;
+
+    .tab {
+      flex: 0 60%;
+      margin: 10px 0;
+    }
+  }
+}

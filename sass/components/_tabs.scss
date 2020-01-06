@@ -22,18 +22,18 @@
     border-radius: 50%;
     margin: calc((40px - 16px)/2) 10px 0 0;
   }
+}
 
-  .one {
-    background-color: $color-tab-one;
-  }
+.one {
+  background-color: $color-tab-one;
+}
 
-  .two {
-    background-color: $color-tab-two;
-  }
+.two {
+  background-color: $color-tab-two;
+}
 
-  .three {
-    background-color: $color-tab-three;
-  }
+.three {
+  background-color: $color-tab-three;
 }
 
 .tab-active {

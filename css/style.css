@@ -551,15 +551,15 @@ a:hover, i.link:hover {
   margin: calc((40px - 16px)/2) 10px 0 0;
 }
 
-.tab .one {
+.one {
   background-color: #80bfca;
 }
 
-.tab .two {
+.two {
   background-color: #ff9a38;
 }
 
-.tab .three {
+.three {
   background-color: #59b66d;
 }
 
@@ -572,31 +572,12 @@ table {
   border-collapse: collapse;
 }
 
-tr {
+table tr {
   border-bottom: 1px solid #e3e3e3;
   border-top: 1px solid #e3e3e3;
 }
 
-tr .icons {
-  float: right;
-  padding: 0 10px;
-  opacity: 0;
-}
-
-tr:hover {
-  background-color: #f5f5f2;
-  cursor: pointer;
-}
-
-tr:hover .icons {
-  opacity: 1;
-}
-
-tr:hover .icons:hover {
-  color: #ffa200;
-}
-
-td {
+table tr td {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   color: #979797;
@@ -604,8 +585,72 @@ td {
   padding: 20px 10px;
 }
 
-td:nth-of-type(1) {
+table tr td:nth-of-type(1) {
   width: 40%;
+}
+
+table tr:hover {
+  background-color: #f5f5f2;
+  cursor: pointer;
+}
+
+table tr:hover .icons {
+  opacity: 1;
+}
+
+table tr:hover .icons:hover {
+  color: #ffa200;
+}
+
+.icons {
+  float: right;
+  padding: 0 10px;
+  opacity: 0;
+}
+
+@media (max-width: 420px) {
+  table {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #e3e3e3;
+  }
+  table tr {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 10px 0;
+    border-bottom: none;
+    border-top: 1px solid #e3e3e3;
+  }
+  table tr td {
+    -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+    padding: 5px 5px;
+  }
+  table tr td a, table tr td i {
+    font-size: 13px;
+  }
+  table tr td:nth-of-type(2) {
+    -ms-flex: 0 0 70%;
+        flex: 0 0 70%;
+  }
+  table tr td:nth-of-type(3) {
+    -ms-flex: 0 0 30%;
+        flex: 0 0 30%;
+  }
+  .icons {
+    padding: 0 5px;
+  }
+}
+
+@media (max-width: 740px) and (min-width: 420px) {
+  table tr td {
+    padding: 15px 0;
+  }
+  table tr td:nth-of-type(1) {
+    width: 35%;
+  }
 }
 
 .btn {
@@ -620,6 +665,7 @@ td:nth-of-type(1) {
   padding: 0 20px;
   border-radius: 3px;
   border: none;
+  outline: none;
 }
 
 .btn:before {
@@ -637,7 +683,8 @@ td:nth-of-type(1) {
 }
 
 .date {
-  display: inline-block;
+  display: -ms-flexbox;
+  display: flex;
   height: 40px;
   box-sizing: border-box;
   border: 1px solid #e3e3e3;
@@ -655,12 +702,15 @@ td:nth-of-type(1) {
 }
 
 .date input {
+  -ms-flex: 0 0 45%;
+      flex: 0 0 45%;
   border: none;
   height: 20px;
   padding: 0 0 0 20px;
   margin: 10px 0 0 0;
   font-weight: 300;
   color: #333;
+  overflow: hidden;
 }
 
 .date input:nth-of-type(2) {
@@ -675,13 +725,34 @@ td:nth-of-type(1) {
   cursor: pointer;
 }
 
-.date .calendar {
+.calendar {
   float: right;
   font-size: 13px;
   line-height: 40px;
   margin-top: 2px;
   color: #bababa;
-  padding: 0 20px 0 0;
+}
+
+@media (max-width: 420px) {
+  .date {
+    width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: 80px;
+  }
+  .date input {
+    -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+    height: 50%;
+    margin: 0;
+  }
+  .date input:nth-of-type(2) {
+    border-left: none;
+    border-top: 1px solid #e3e3e3;
+  }
+  .calendar {
+    display: none;
+  }
 }
 
 /* Sections */
@@ -700,11 +771,11 @@ td:nth-of-type(1) {
   transform: translate(-50%, -50%);
 }
 
-.logo-wrapper .hamburger {
+.hamburger {
   float: right;
 }
 
-.logo-wrapper i {
+.hamburger i {
   color: #979797;
   line-height: 23px;
   font-size: 22px;
@@ -712,11 +783,11 @@ td:nth-of-type(1) {
   display: none;
 }
 
-.logo-wrapper i:hover {
+.hamburger i:hover {
   color: #fff;
 }
 
-.logo-wrapper .i-active {
+.i-active {
   display: inline-block;
 }
 
@@ -853,7 +924,7 @@ td:nth-of-type(1) {
   padding: 0 10px 0 0;
 }
 
-.sidebar .manager {
+.manager {
   box-sizing: border-box;
   width: 100%;
   margin: 20px 0 0 0;
@@ -862,20 +933,20 @@ td:nth-of-type(1) {
   position: relative;
 }
 
-.sidebar .manager h1, .sidebar .manager a {
+.manager h1, .manager a {
   font-size: 14px;
 }
 
-.sidebar .manager .wrap-manager {
+.wrap-manager {
   position: relative;
   margin: 20px 0 0 0;
 }
 
-.sidebar .manager .wrap-manager img {
+.wrap-manager img {
   float: left;
 }
 
-.sidebar .manager .wrap-manager span {
+.wrap-manager span {
   position: absolute;
   top: 0px;
   left: 32px;
@@ -885,25 +956,39 @@ td:nth-of-type(1) {
   border-radius: 50%;
 }
 
-.sidebar .manager .wrap-manager a {
+.wrap-manager a {
   margin: 0 0 0 10px;
   line-height: 43px;
 }
 
-.sidebar .sidebar-topbar {
+.sidebar-topbar {
   margin: 20px 0;
   border-top: 1px solid #333;
 }
 
-.sidebar .sidebar-topbar .sidebar-topbar-list {
+.sidebar-topbar-list {
   margin: 20px 0 0 0;
   color: #979797;
   font-family: "Roboto", sans-serif;
 }
 
-.sidebar .sidebar-topbar .sidebar-topbar-list i:nth-of-type(2) {
+.sidebar-topbar-list i {
+  position: relative;
+}
+
+.sidebar-topbar-list i:nth-of-type(2) {
   margin: 0 0 0 10px;
   font-size: 10px;
+}
+
+.sidebar-topbar-list i span {
+  position: absolute;
+  top: -3px;
+  left: 8px;
+  width: 8px;
+  height: 8px;
+  background: #f58220;
+  border-radius: 50%;
 }
 
 @media (max-width: 992px) {
@@ -975,13 +1060,18 @@ td:nth-of-type(1) {
   display: flex;
 }
 
+.wrap-charts, .wrap-tabs, .wrap-chart-image {
+  padding: 20px 0;
+}
+
 .wrap-date, .wrap-tabs, .wrap-chart-image, .wrap-links {
   -ms-flex-pack: center;
       justify-content: center;
 }
 
 .wrap-date .btn {
-  width: 40px;
+  -ms-flex: 0 0 40px;
+      flex: 0 0 40px;
   padding: 0;
   text-align: center;
   margin: 0 0 0 10px;
@@ -1010,7 +1100,7 @@ td:nth-of-type(1) {
 }
 
 .wrap-tabs .tab {
-  margin: 0 20px 0 20px;
+  margin: 0 15px;
 }
 
 .wrap-links {
@@ -1029,7 +1119,39 @@ td:nth-of-type(1) {
 
 @media (max-width: 992px) {
   .wrap-date, .wrap-line-headings, .wrap-charts, .wrap-tabs, .wrap-chart-image, .wrap-links {
-    width: 80%;
+    width: 70vw;
+  }
+  .wrap-date .btn {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .wrap-line-headings h3 {
+    -ms-flex: 0 95%;
+        flex: 0 95%;
+  }
+}
+
+@media (max-width: 700px) {
+  .wrap-chart-image {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
+  .wrap-chart-image img {
+    width: auto;
+  }
+}
+
+@media (max-width: 560px) {
+  .wrap-tabs {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .wrap-tabs .tab {
+    -ms-flex: 0 60%;
+        flex: 0 60%;
+    margin: 10px 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

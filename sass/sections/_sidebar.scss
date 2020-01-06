@@ -33,63 +33,76 @@
       }
     }
   }
+}
 
-  .manager {
-    box-sizing: border-box;
-    width: 100%;
-    margin: 20px 0 0 0;
-    padding: 10px;
-    border-top: 1px solid $color-one;
-    position: relative;
+.manager {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 20px 0 0 0;
+  padding: 10px;
+  border-top: 1px solid $color-one;
+  position: relative;
 
+  h1, a {
+    font-size: $font-size-medium;
+  }
+}
 
-    h1, a {
-      font-size: $font-size-medium;
-    }
+.wrap-manager {
+  position: relative;
+  margin: 20px 0 0 0;
 
-    .wrap-manager {
-      position: relative;
-      margin: 20px 0 0 0;
-
-      img {
-        float: left;
-      }
-
-      span {
-        position: absolute;
-        top: 0px;
-        left: 32px;
-        width: 10px;
-        height: 10px;
-        background: $color-online;
-        border-radius: 50%;
-      }
-
-      a {
-        margin: 0 0 0 10px;
-        line-height: 43px;
-      }
-    }
+  img {
+    float: left;
   }
 
-  .sidebar-topbar {
-    margin: 20px 0;
-    border-top: 1px solid $color-one;
+  span {
+    position: absolute;
+    top: 0px;
+    left: 32px;
+    width: 10px;
+    height: 10px;
+    background: $color-online;
+    border-radius: 50%;
+  }
 
-    .sidebar-topbar-list {
-      margin: 20px 0 0 0;
-      color: $color-two;
-      font-family: $font-main;
+  a {
+    margin: 0 0 0 10px;
+    line-height: 43px;
+  }
+}
 
-      i {
-        &:nth-of-type(2){
-          margin: 0 0 0 10px;
-          font-size: 10px;
-        }
-      }
+
+.sidebar-topbar {
+  margin: 20px 0;
+  border-top: 1px solid $color-one;
+}
+
+.sidebar-topbar-list {
+  margin: 20px 0 0 0;
+  color: $color-two;
+  font-family: $font-main;
+
+  i {
+    position: relative;
+
+    &:nth-of-type(2){
+      margin: 0 0 0 10px;
+      font-size: 10px;
+    }
+
+    span {
+      position: absolute;
+      top: -3px;
+      left: 8px;
+      width: 8px;
+      height: 8px;
+      background: $color-button;
+      border-radius: 50%;
     }
   }
 }
+
 
 @media(max-width: 992px) {
   .sidebar {
