@@ -10,7 +10,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 
   .hamburger {
     float: right;
@@ -34,21 +34,13 @@
 }
 
 @media(max-width: 992px) {
-  .hamburger-small {
+  .hamburger {
     display: inline-block;
-  }
-
-  .hamburger-large {
-    display: none;
   }
 }
 
 @media(min-width: 992px) {
-  .hamburger-small {
+  .hamburger {
     display: none;
-  }
-
-  .hamburger-large {
-    display: inline-block;
   }
 }

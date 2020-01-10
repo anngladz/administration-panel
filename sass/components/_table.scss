@@ -12,12 +12,12 @@ table {
       font-weight: bold;
       padding: 20px 10px;
 
-      &:nth-of-type(1){
+      &:nth-of-type(1) {
         width: 40%;
       }
     }
 
-    &:hover{
+    &:hover {
       background-color: $color-five;
       cursor: pointer;
 
@@ -38,7 +38,7 @@ table {
   opacity: 0;
 }
 
-@media(max-width: 420px) {
+@media(max-width: 425px) {
   table {
     display: block;
     width: 100%;
@@ -52,39 +52,58 @@ table {
       border-top: 1px solid $color-four;
 
       td {
-        flex: 0 0 100%;
         padding: 5px 5px;
 
-        a, i {
+        a,
+        i {
           font-size: 13px;
         }
 
-        &:nth-of-type(2) {
+        &:nth-of-type(1) {
           flex: 0 0 70%;
+          order: 1;
+        }
+
+        &:nth-of-type(2) {
+          flex: 0 0 100%;
+          order: 3;
         }
 
         &:nth-of-type(3) {
           flex: 0 0 30%;
+          order: 2;
         }
       }
     }
   }
 
   .icons {
+    opacity: 1;
     padding: 0 5px;
   }
 }
 
-@media(max-width: 740px) and (min-width: 420px) {
+@media(max-width: 830px) and (min-width: 425px) {
   table {
     tr {
       td {
+        font-size: 14px;
         padding: 15px 0;
 
-        &:nth-of-type(1){
+        &:nth-of-type(1) {
           width: 35%;
+        }
+
+        a,
+        i {
+          font-size: 14px;
         }
       }
     }
+  }
+
+  .icons {
+    opacity: 1;
+    padding: 0 5px;
   }
 }

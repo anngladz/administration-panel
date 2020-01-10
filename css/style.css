@@ -347,7 +347,6 @@ template {
 .container {
   width: 100%;
   height: 100%;
-  position: fixed;
 }
 
 .row {
@@ -355,7 +354,11 @@ template {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background: #191919;
+  background: #f5f5f2;
+}
+
+.fixed {
+  position: fixed;
 }
 
 @media (max-width: 992px) {
@@ -474,7 +477,9 @@ template {
 }
 
 /* Components */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   color: #979797;
@@ -485,7 +490,8 @@ h1 {
   font-weight: normal;
 }
 
-h2, h3 {
+h2,
+h3 {
   font-weight: bold;
 }
 
@@ -508,7 +514,8 @@ p {
   color: #333;
 }
 
-a, i.link {
+a,
+i.link {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 300;
@@ -516,7 +523,8 @@ a, i.link {
   text-decoration: none;
 }
 
-a:hover, i.link:hover {
+a:hover,
+i.link:hover {
   cursor: pointer;
   color: #ffa200;
 }
@@ -608,7 +616,7 @@ table tr:hover .icons:hover {
   opacity: 0;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 425px) {
   table {
     display: block;
     width: 100%;
@@ -624,32 +632,51 @@ table tr:hover .icons:hover {
     border-top: 1px solid #e3e3e3;
   }
   table tr td {
-    -ms-flex: 0 0 100%;
-        flex: 0 0 100%;
     padding: 5px 5px;
   }
-  table tr td a, table tr td i {
+  table tr td a,
+  table tr td i {
     font-size: 13px;
   }
-  table tr td:nth-of-type(2) {
+  table tr td:nth-of-type(1) {
     -ms-flex: 0 0 70%;
         flex: 0 0 70%;
+    -ms-flex-order: 1;
+        order: 1;
+  }
+  table tr td:nth-of-type(2) {
+    -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+    -ms-flex-order: 3;
+        order: 3;
   }
   table tr td:nth-of-type(3) {
     -ms-flex: 0 0 30%;
         flex: 0 0 30%;
+    -ms-flex-order: 2;
+        order: 2;
   }
   .icons {
+    opacity: 1;
     padding: 0 5px;
   }
 }
 
-@media (max-width: 740px) and (min-width: 420px) {
+@media (max-width: 830px) and (min-width: 425px) {
   table tr td {
+    font-size: 14px;
     padding: 15px 0;
   }
   table tr td:nth-of-type(1) {
     width: 35%;
+  }
+  table tr td a,
+  table tr td i {
+    font-size: 14px;
+  }
+  .icons {
+    opacity: 1;
+    padding: 0 5px;
   }
 }
 
@@ -711,6 +738,7 @@ table tr:hover .icons:hover {
   font-weight: 300;
   color: #333;
   overflow: hidden;
+  background-color: #fff;
 }
 
 .date input:nth-of-type(2) {
@@ -733,7 +761,7 @@ table tr:hover .icons:hover {
   color: #bababa;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 425px) {
   .date {
     width: 100%;
     -ms-flex-wrap: wrap;
@@ -792,20 +820,14 @@ table tr:hover .icons:hover {
 }
 
 @media (max-width: 992px) {
-  .hamburger-small {
+  .hamburger {
     display: inline-block;
-  }
-  .hamburger-large {
-    display: none;
   }
 }
 
 @media (min-width: 992px) {
-  .hamburger-small {
+  .hamburger {
     display: none;
-  }
-  .hamburger-large {
-    display: inline-block;
   }
 }
 
@@ -910,11 +932,13 @@ table tr:hover .icons:hover {
   box-shadow: inset 4px 0px 0px 0px #f58220;
 }
 
-.sidebar ul li:hover a, .sidebar ul li:hover i {
+.sidebar ul li:hover a,
+.sidebar ul li:hover i {
   color: #fff;
 }
 
-.sidebar ul li a, .sidebar ul li i {
+.sidebar ul li a,
+.sidebar ul li i {
   font-size: 14px;
   color: #979797;
   vertical-align: middle;
@@ -924,7 +948,7 @@ table tr:hover .icons:hover {
   padding: 0 10px 0 0;
 }
 
-.manager {
+.sidebar .manager {
   box-sizing: border-box;
   width: 100%;
   margin: 20px 0 0 0;
@@ -933,20 +957,21 @@ table tr:hover .icons:hover {
   position: relative;
 }
 
-.manager h1, .manager a {
+.sidebar .manager h1,
+.sidebar .manager a {
   font-size: 14px;
 }
 
-.wrap-manager {
+.sidebar .wrap-manager {
   position: relative;
   margin: 20px 0 0 0;
 }
 
-.wrap-manager img {
+.sidebar .wrap-manager img {
   float: left;
 }
 
-.wrap-manager span {
+.sidebar .wrap-manager span {
   position: absolute;
   top: 0px;
   left: 32px;
@@ -956,32 +981,32 @@ table tr:hover .icons:hover {
   border-radius: 50%;
 }
 
-.wrap-manager a {
+.sidebar .wrap-manager a {
   margin: 0 0 0 10px;
   line-height: 43px;
 }
 
-.sidebar-topbar {
+.sidebar .sidebar-topbar {
   margin: 20px 0;
   border-top: 1px solid #333;
 }
 
-.sidebar-topbar-list {
+.sidebar .sidebar-topbar-list {
   margin: 20px 0 0 0;
   color: #979797;
   font-family: "Roboto", sans-serif;
 }
 
-.sidebar-topbar-list i {
+.sidebar .sidebar-topbar-list i {
   position: relative;
 }
 
-.sidebar-topbar-list i:nth-of-type(2) {
+.sidebar .sidebar-topbar-list i:nth-of-type(2) {
   margin: 0 0 0 10px;
   font-size: 10px;
 }
 
-.sidebar-topbar-list i span {
+.sidebar .sidebar-topbar-list i span {
   position: absolute;
   top: -3px;
   left: 8px;
@@ -998,12 +1023,9 @@ table tr:hover .icons:hover {
     overflow-y: scroll;
     transition: 1s all;
   }
-  .sidebar-wrapper {
-    width: 85vw;
-    margin: 0 auto;
-  }
   .active {
     height: calc(100vh - 60px);
+    padding-bottom: 60px;
   }
   .sidebar-topbar {
     display: block;
@@ -1011,15 +1033,6 @@ table tr:hover .icons:hover {
 }
 
 @media (min-width: 992px) {
-  .sidebar {
-    display: block;
-    height: calc(100vh - 60px);
-    transition: 1s all;
-    overflow: hidden;
-  }
-  .unactive {
-    height: 0;
-  }
   .sidebar-topbar {
     display: none;
   }
@@ -1052,7 +1065,12 @@ table tr:hover .icons:hover {
 }
 
 /* Pages */
-.wrap-date, .wrap-line-headings, .wrap-charts, .wrap-tabs, .wrap-chart-image, .wrap-links {
+.wrap-date,
+.wrap-line-headings,
+.wrap-charts,
+.wrap-tabs,
+.wrap-chart-image,
+.wrap-links {
   padding: 40px 0;
   width: 700px;
   margin: 0 auto;
@@ -1060,11 +1078,16 @@ table tr:hover .icons:hover {
   display: flex;
 }
 
-.wrap-charts, .wrap-tabs, .wrap-chart-image {
+.wrap-charts,
+.wrap-tabs,
+.wrap-chart-image {
   padding: 20px 0;
 }
 
-.wrap-date, .wrap-tabs, .wrap-chart-image, .wrap-links {
+.wrap-date,
+.wrap-tabs,
+.wrap-chart-image,
+.wrap-links {
   -ms-flex-pack: center;
       justify-content: center;
 }
@@ -1118,7 +1141,12 @@ table tr:hover .icons:hover {
 }
 
 @media (max-width: 992px) {
-  .wrap-date, .wrap-line-headings, .wrap-charts, .wrap-tabs, .wrap-chart-image, .wrap-links {
+  .wrap-date,
+  .wrap-line-headings,
+  .wrap-charts,
+  .wrap-tabs,
+  .wrap-chart-image,
+  .wrap-links {
     width: 70vw;
   }
   .wrap-date .btn {

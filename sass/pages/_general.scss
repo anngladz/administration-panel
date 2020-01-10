@@ -1,15 +1,25 @@
-.wrap-date, .wrap-line-headings, .wrap-charts, .wrap-tabs, .wrap-chart-image, .wrap-links {
+.wrap-date,
+.wrap-line-headings,
+.wrap-charts,
+.wrap-tabs,
+.wrap-chart-image,
+.wrap-links {
   padding: 40px 0;
   width: 700px;
   margin: 0 auto;
   display: flex;
 }
 
-.wrap-charts, .wrap-tabs, .wrap-chart-image {
+.wrap-charts,
+.wrap-tabs,
+.wrap-chart-image {
   padding: 20px 0;
 }
 
-.wrap-date, .wrap-tabs, .wrap-chart-image, .wrap-links{
+.wrap-date,
+.wrap-tabs,
+.wrap-chart-image,
+.wrap-links {
   justify-content: center;
 }
 
@@ -59,7 +69,12 @@
 }
 
 @media(max-width: 992px) {
-  .wrap-date, .wrap-line-headings, .wrap-charts, .wrap-tabs, .wrap-chart-image, .wrap-links {
+  .wrap-date,
+  .wrap-line-headings,
+  .wrap-charts,
+  .wrap-tabs,
+  .wrap-chart-image,
+  .wrap-links {
     width: 70vw;
   }
 

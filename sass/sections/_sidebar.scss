@@ -17,12 +17,14 @@
         background: $color-one;
         box-shadow: inset 4px 0px 0px 0px $color-button;
 
-        a, i {
+        a,
+        i {
           color: $bg-light;
         }
       }
 
-      a, i {
+      a,
+      i {
         font-size: $font-size-medium;
         color: $color-two;
         vertical-align: middle;
@@ -33,76 +35,75 @@
       }
     }
   }
-}
 
-.manager {
-  box-sizing: border-box;
-  width: 100%;
-  margin: 20px 0 0 0;
-  padding: 10px;
-  border-top: 1px solid $color-one;
-  position: relative;
-
-  h1, a {
-    font-size: $font-size-medium;
-  }
-}
-
-.wrap-manager {
-  position: relative;
-  margin: 20px 0 0 0;
-
-  img {
-    float: left;
-  }
-
-  span {
-    position: absolute;
-    top: 0px;
-    left: 32px;
-    width: 10px;
-    height: 10px;
-    background: $color-online;
-    border-radius: 50%;
-  }
-
-  a {
-    margin: 0 0 0 10px;
-    line-height: 43px;
-  }
-}
-
-
-.sidebar-topbar {
-  margin: 20px 0;
-  border-top: 1px solid $color-one;
-}
-
-.sidebar-topbar-list {
-  margin: 20px 0 0 0;
-  color: $color-two;
-  font-family: $font-main;
-
-  i {
+  .manager {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 20px 0 0 0;
+    padding: 10px;
+    border-top: 1px solid $color-one;
     position: relative;
 
-    &:nth-of-type(2){
-      margin: 0 0 0 10px;
-      font-size: 10px;
+    h1,
+    a {
+      font-size: $font-size-medium;
+    }
+  }
+
+  .wrap-manager {
+    position: relative;
+    margin: 20px 0 0 0;
+
+    img {
+      float: left;
     }
 
     span {
       position: absolute;
-      top: -3px;
-      left: 8px;
-      width: 8px;
-      height: 8px;
-      background: $color-button;
+      top: 0px;
+      left: 32px;
+      width: 10px;
+      height: 10px;
+      background: $color-online;
       border-radius: 50%;
+    }
+
+    a {
+      margin: 0 0 0 10px;
+      line-height: 43px;
+    }
+  }
+
+  .sidebar-topbar {
+    margin: 20px 0;
+    border-top: 1px solid $color-one;
+  }
+
+  .sidebar-topbar-list {
+    margin: 20px 0 0 0;
+    color: $color-two;
+    font-family: $font-main;
+
+    i {
+      position: relative;
+
+      &:nth-of-type(2) {
+        margin: 0 0 0 10px;
+        font-size: 10px;
+      }
+
+      span {
+        position: absolute;
+        top: -3px;
+        left: 8px;
+        width: 8px;
+        height: 8px;
+        background: $color-button;
+        border-radius: 50%;
+      }
     }
   }
 }
-
 
 @media(max-width: 992px) {
   .sidebar {
@@ -112,13 +113,9 @@
     transition: 1s all;
   }
 
-  .sidebar-wrapper {
-    width: 85vw;
-    margin: 0 auto;
-  }
-
   .active {
     height: calc(100vh - 60px);
+    padding-bottom: 60px;
   }
 
   .sidebar-topbar {
@@ -127,17 +124,6 @@
 }
 
 @media(min-width: 992px) {
-  .sidebar {
-    display: block;
-    height: calc(100vh - 60px);
-    transition: 1s all;
-    overflow: hidden;
-  }
-
-  .unactive {
-    height: 0;
-  }
-
   .sidebar-topbar {
     display: none;
   }
