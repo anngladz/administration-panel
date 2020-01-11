@@ -17,9 +17,9 @@ const sidebar = document.querySelector('.sidebar');
 
 hamburger.addEventListener('click', function () {
   sidebar.classList.toggle('active');
-  sidebar.classList.toggle('unactive');
   hamburgerIcon.classList.toggle('i-active');
   hamburgerIconX.classList.toggle('i-active');
   //prevents site scrolling when the menu is active on mobile devices
   document.body.classList.toggle('fixed');
 });
+

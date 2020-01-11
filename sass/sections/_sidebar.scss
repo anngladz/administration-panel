@@ -23,6 +23,12 @@
         }
       }
 
+      a {
+        height: 100%;
+        width: 100%;
+        display: block;
+      }
+
       a,
       i {
         font-size: $font-size-medium;
@@ -32,6 +38,7 @@
 
       i {
         padding: 0 10px 0 0;
+        float: left;
       }
     }
   }
@@ -120,6 +127,10 @@
 
   .sidebar-topbar {
     display: block;
+  }
+
+  .sidebar-wrapper {
+    padding: 0 10vw;
   }
 }
 

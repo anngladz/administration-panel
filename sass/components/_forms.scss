@@ -15,7 +15,6 @@
     }
   }
 
-
   input {
     flex: 0 0 45%;
     border: none;
@@ -49,6 +48,39 @@
   color: $color-three;
 }
 
+.personal-data {
+  width: 80%;
+}
+
+.center {
+  text-align: center;
+}
+
+.field {
+  font-size: $font-size-large;
+  font-family: $font-main;
+  font-weight: bold;
+  color: $color-two;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
+
+  label {
+    flex: 0 0 30%;
+    line-height: 40px;
+  }
+
+  input {
+    flex: 0 0 70%;
+    height: 40px;
+    border: 1px solid $color-four;
+    border-radius: 3px;
+    color: $bg-dark;
+    font-family: $font-main;
+    font-size: $font-size-medium;
+    padding: 15px;
+  }
+}
 
 @media(max-width: 425px) {
   .date {
@@ -70,5 +102,21 @@
 
   .calendar {
     display: none;
+  }
+}
+
+@media(max-width: 992px) {
+  .personal-data {
+    width: 100%;
+  }
+
+  .field {
+    label {
+      flex: 0 0 100%;
+    }
+
+    input {
+      flex: 0 0 100%;
+    }
   }
 }

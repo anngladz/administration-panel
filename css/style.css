@@ -760,6 +760,44 @@ table tr:hover .icons:hover {
   color: #bababa;
 }
 
+.personal-data {
+  width: 80%;
+}
+
+.center {
+  text-align: center;
+}
+
+.field {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: #979797;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 15px;
+}
+
+.field label {
+  -ms-flex: 0 0 30%;
+      flex: 0 0 30%;
+  line-height: 40px;
+}
+
+.field input {
+  -ms-flex: 0 0 70%;
+      flex: 0 0 70%;
+  height: 40px;
+  border: 1px solid #e3e3e3;
+  border-radius: 3px;
+  color: #191919;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  padding: 15px;
+}
+
 @media (max-width: 425px) {
   .date {
     width: 100%;
@@ -779,6 +817,20 @@ table tr:hover .icons:hover {
   }
   .calendar {
     display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .personal-data {
+    width: 100%;
+  }
+  .field label {
+    -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+  }
+  .field input {
+    -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
   }
 }
 
@@ -936,6 +988,12 @@ table tr:hover .icons:hover {
   color: #fff;
 }
 
+.sidebar ul li a {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
 .sidebar ul li a,
 .sidebar ul li i {
   font-size: 14px;
@@ -945,6 +1003,7 @@ table tr:hover .icons:hover {
 
 .sidebar ul li i {
   padding: 0 10px 0 0;
+  float: left;
 }
 
 .sidebar .manager {
@@ -1029,6 +1088,9 @@ table tr:hover .icons:hover {
   .sidebar-topbar {
     display: block;
   }
+  .sidebar-wrapper {
+    padding: 0 10vw;
+  }
 }
 
 @media (min-width: 992px) {
@@ -1064,7 +1126,7 @@ table tr:hover .icons:hover {
 }
 
 /* Pages */
-.wrap-date,
+.wrap-form,
 .wrap-line-headings,
 .wrap-charts,
 .wrap-tabs,
@@ -1083,7 +1145,7 @@ table tr:hover .icons:hover {
   padding: 20px 0;
 }
 
-.wrap-date,
+.wrap-form,
 .wrap-tabs,
 .wrap-chart-image,
 .wrap-links {
@@ -1091,7 +1153,7 @@ table tr:hover .icons:hover {
       justify-content: center;
 }
 
-.wrap-date .btn {
+.wrap-form .btn-refresh {
   -ms-flex: 0 0 40px;
       flex: 0 0 40px;
   padding: 0;
@@ -1140,7 +1202,7 @@ table tr:hover .icons:hover {
 }
 
 @media (max-width: 992px) {
-  .wrap-date,
+  .wrap-form,
   .wrap-line-headings,
   .wrap-charts,
   .wrap-tabs,
@@ -1148,7 +1210,7 @@ table tr:hover .icons:hover {
   .wrap-links {
     width: 70vw;
   }
-  .wrap-date .btn {
+  .wrap-form .btn {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;

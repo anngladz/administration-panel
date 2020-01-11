@@ -1,4 +1,4 @@
-.wrap-date,
+.wrap-form,
 .wrap-line-headings,
 .wrap-charts,
 .wrap-tabs,
@@ -16,20 +16,21 @@
   padding: 20px 0;
 }
 
-.wrap-date,
+.wrap-form,
 .wrap-tabs,
 .wrap-chart-image,
 .wrap-links {
   justify-content: center;
 }
 
-.wrap-date {
-  .btn {
+.wrap-form {
+  .btn-refresh {
     flex: 0 0 40px;
     padding: 0;
     text-align: center;
     margin: 0 0 0 10px;
   }
+
 }
 
 .wrap-line-headings {
@@ -69,7 +70,7 @@
 }
 
 @media(max-width: 992px) {
-  .wrap-date,
+  .wrap-form,
   .wrap-line-headings,
   .wrap-charts,
   .wrap-tabs,
@@ -78,7 +79,7 @@
     width: 70vw;
   }
 
-  .wrap-date {
+  .wrap-form {
     .btn {
       align-self: center;
     }
