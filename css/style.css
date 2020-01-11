@@ -616,9 +616,8 @@ table tr:hover .icons:hover {
   opacity: 0;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 640px) {
   table {
-    display: block;
     width: 100%;
     border-bottom: 1px solid #e3e3e3;
   }
@@ -662,7 +661,7 @@ table tr:hover .icons:hover {
   }
 }
 
-@media (max-width: 830px) and (min-width: 425px) {
+@media (max-width: 830px) and (min-width: 641px) {
   table tr td {
     font-size: 14px;
     padding: 15px 0;
