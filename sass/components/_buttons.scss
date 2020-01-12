@@ -26,3 +26,11 @@
     margin-top: 3px;
   }
 }
+
+.btn-two {
+  background: $color-two;
+
+  &:hover {
+    background: $color-three;
+  }
+}

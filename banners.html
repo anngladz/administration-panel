@@ -14,6 +14,21 @@
 </head>
 
 <body>
+  <div class="overlay" id="overlay">
+    <div class="modal" id="myModal">
+      <div class="btn-close js--close-modal"><i class="fas fa-times"></i></div>
+
+      <div class="wrap-modal">
+        <h2>Do you really want to Quit?</h2>
+      </div>
+      <hr>
+      <div class="wrap-modal">
+        <div class="btn">Quit</div>
+        <div class="btn btn-two js--close-modal">Cancel</div>
+      </div>
+    </div>
+  </div>
+
   <div class="container">
     <div class="row">
 
@@ -34,7 +49,7 @@
           <li><i class="icon-profile"></i>
             <div class="link-wrap"><a href="#">Leonardo Dicaprio</a></div>
           </li>
-          <li><i class="icon-quit"></i></li>
+          <li class="quit"><i class="icon-quit"></i></li>
         </ul>
       </nav>
 
@@ -66,7 +81,7 @@
               <li><i class="icon-notification"><span></span></i><a href="#">Notification</a></li>
               <li><i class="icon-profile"></i><a href="#">Leonardo Dicaprio</a>
               </li>
-              <li><i class="icon-quit"></i><a href="#">Logout</a></li>
+              <li class="quit"><i class="icon-quit"></i><a href="#">Logout</a></li>
             </ul>
           </div>
         </div>

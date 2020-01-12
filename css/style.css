@@ -708,6 +708,14 @@ table tr:hover .icons:hover {
   margin-top: 3px;
 }
 
+.btn-two {
+  background: #979797;
+}
+
+.btn-two:hover {
+  background: #bababa;
+}
+
 .date {
   display: -ms-flexbox;
   display: flex;
@@ -832,6 +840,85 @@ table tr:hover .icons:hover {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
   }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  overflow: auto;
+  padding: 30px;
+  display: none;
+}
+
+.overlay.show {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.overlay::webkit-scrollbar {
+  display: none;
+}
+
+.modal {
+  max-width: 600px;
+  width: 350px;
+  margin: auto;
+  background-color: #fff;
+  position: relative;
+  display: none;
+}
+
+.modal hr {
+  margin: 0;
+  height: 1px;
+  background-color: #e3e3e3;
+  border: none;
+}
+
+.modal.show {
+  display: block;
+}
+
+.modal .btn-close {
+  cursor: pointer;
+  color: #979797;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
+}
+
+.wrap-modal {
+  padding: 25px;
+}
+
+.wrap-modal h2 {
+  margin: 0;
+}
+
+.wrap-modal .btn {
+  float: right;
+  margin: 0 0 25px 10px;
 }
 
 /* Sections */
@@ -1062,6 +1149,7 @@ table tr:hover .icons:hover {
 .sidebar .sidebar-topbar-list i:nth-of-type(2) {
   margin: 0 0 0 10px;
   font-size: 10px;
+  float: none;
 }
 
 .sidebar .sidebar-topbar-list i span {
