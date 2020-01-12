@@ -68,6 +68,8 @@ for (let quit of quits) {
 //charts
 
 var ctx = document.getElementById('myChart').getContext('2d');
+/* exported chart */
+/* global Chart*/
 
 var chart = new Chart(ctx, {
   // 1
