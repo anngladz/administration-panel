@@ -1,6 +1,6 @@
-## Individual project (Just Do It)
+## Administration panel (Just Do It)
 
-Link to live version: [DEMO](https://anna-gladzinska.github.io/individual-project/)
+Link to live version: [DEMO](https://anna-gladzinska.github.io/administration-panel/)
 
 Individual project of an administration panel based on provided PSD file.
 
